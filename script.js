@@ -1,4 +1,4 @@
-// ✅ VALIDACIÓN DE FORMULARIO Y MENSAJE DE ÉXITO
+// VALIDACIÓN DE FORMULARIO Y MENSAJE DE ÉXITO
 document.addEventListener("DOMContentLoaded", () => {
   const formulario = document.querySelector(".formulario-contacto");
   const nombre = document.getElementById("nombre");
@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const motivo = document.getElementById("motivo");
   const mensaje = document.getElementById("mensaje");
   const mensajeExito = document.getElementById("mensaje-exito");
-
   formulario.addEventListener("submit", (e) => {
     e.preventDefault();
     if (
@@ -15,16 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
       motivo.value === "" ||
       mensaje.value.trim() === ""
     ) {
-      alert("🚫 Por favor completa todos los campos antes de enviar.");
+      alert("Por favor completa todos los campos antes de enviar.");
       return;
     }
-
     // Mostrar mensaje de éxito y resetear formulario
     mensajeExito.style.display = "block";
     formulario.reset();
   });
-
-  // ✨ EFECTO DE ANIMACIÓN AL HACER SCROLL
+  // EFECTO DE ANIMACIÓN AL HACER SCROLL
   const animar = (entradas, observer) => {
     entradas.forEach((entrada) => {
       if (entrada.isIntersecting) {
@@ -33,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   };
-
   const opciones = { threshold: 0.1 };
   const observador = new IntersectionObserver(animar, opciones);
   const seccionesAnimadas = document.querySelectorAll(
@@ -42,8 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   seccionesAnimadas.forEach((seccion) => {
     observador.observe(seccion);
   });
-
-  // 🟢 MENSAJE DE WHATSAPP AUTOMÁTICO
+  // MENSAJE DE WHATSAPP AUTOMÁTICO
   const btnWhatsapp = document.querySelector(".btn-whatsapp-grande");
   btnWhatsapp.addEventListener("click", () => {
     const mensaje = encodeURIComponent(
