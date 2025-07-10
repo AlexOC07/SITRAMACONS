@@ -124,7 +124,7 @@ section.info img:hover {
     transition: transform 0.5s ease;
 }
 .galeria img:hover {
-    transform: scale(1.18);
+    transform: scale(1.10);
 }
 /* 🧾 TABLA */
 .table-section {
